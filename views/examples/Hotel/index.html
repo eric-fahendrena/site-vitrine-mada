@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="max-width=device-width, initial-scale=1.0" />
+      <title>Exemple site vitrine d'un Hotel</title>
+      
+      <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel ="stylesheet" integrity ="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin = "anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" type="text/css" />
+      <link rel="stylesheet" href="slick/slick.css" type="text/css" media="all" />
+      <link rel="stylesheet" href="slick/slick-theme.css" type="text/css" media="all" />
+      <link rel="stylesheet" href="views/examples/Hotel/public/css/styles.css" type="text/css" />
+      <style type="text/css" media="all">
+         @font-face {
+            font-family: "Font Awesome 6 free";
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.ttf"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2");
+         }
+         @font-face {
+            font-family: "Font Awesome 6 brands";
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.ttf"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2");
+         }
+         
+         div {
+            min-height: 24pt;
+         }
+      </style>
+   </head>
+   <body>
+      <header class="master-header sticky-top">
+         <div class="container">
+            <nav class="">
+               <a class="" href="/">Révenez à la page d'accueil</a>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <section class="banner position-relative">
+            <div class="text d-flex align-items-center">
+               <div class="container">
+                  <h1 class="secondary">Profitez l'air fresh du voyage</h1>
+                  <p class="lead">Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                  <a class="btn primary" href="#">Réservez une place</a>
+               </div>
+            </div>
+            <img class="img-fluid" src="views/examples/Hotel/public/img/belle_vue.jpg" alt="Une belle vue" />
+            <div class="offer py-5">
+               <div class="container">
+                  <div class="row row-cols-4">
+                     <div class="col">
+                        <div class="row">
+                           <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                              <i class="fas fa-car-side fs-3"></i>
+                           </div>
+                           <div class="col-md-8 d-none d-md-block">
+                              <span>Voiture lorem ipsum</span>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col">
+                        <div class="row">
+                           <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                              <i class="fas fa-wifi fs-3"></i>
+                           </div>
+                           <div class="col-md-8 d-none d-md-block">
+                              <span>Wifi lorem ipsum</span>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col">
+                        <div class="row">
+                           <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                              <i class="fas fa-bed fs-3"></i>
+                           </div>
+                           <div class="col-md-8 d-none d-md-block">
+                              <span>Chambre lorem ipsum</span>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col">
+                        <div class="row">
+                           <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+                              <i class="fas fa-square-parking fs-3"></i>
+                           </div>
+                           <div class="col-md-8 d-none d-md-block">
+                              <span>Voiture lorem ipsum</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-1" class="py-5">
+            <div class="container">
+               <header class="text-center mb-5">
+                 <h2 class="">Pourquoi chez nous?</h2>
+               </header>
+               <div class="row">
+                  <div class="col-md-4 p-3">
+                     <div class="item">
+                        <div class="icon mb-2">
+                           <i class="fas fa-hamburger fs-2"></i>
+                        </div>
+                        <h3 class="h4">Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <a class="btn primary" href="#">Lorem ipsum</a>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4 p-3">
+                     <div class="item">
+                        <div class="icon mb-2">
+                           <i class="fas fa-bed fs-2"></i>
+                        </div>
+                        <h3 class="h4">Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <a class="btn primary" href="#">Lorem ipsum</a>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4 p-3">
+                     <div class="item">
+                        <div class="icon mb-2">
+                           <i class="fas fa-bowl-food fs-2"></i>
+                        </div>
+                        <h3 class="h4">Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <a class="btn primary" href="#">Lorem ipsum</a>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-2" class="">
+            <div class="row align-items-center">
+               <div class="col-md-6 d-none d-md-block">
+                  <img class="img-fluid" src="views/examples/Hotel/public/img/hotel_avec_chaises_verts.jpg" alt="Hotel avec du deco vert" />
+               </div>
+               <div class="col-md-6 p-5">
+                  <h2 class="mb-5 text-uppercase secondary">À propos de nous</h2>
+                  <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                  <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                  <a class="btn primary" href="">Contactez-nous</a>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-3" class="py-5">
+            <div class="container">
+               <header class="text-center mb-5">
+                  <h2>Lorem ipsum dolor</h2>
+                  <p class="">Lorem ipsum dolor sit amet</p>
+               </header>
+               <div class="autoslide">
+                  <div class="item">
+                     <img class="img-fluid" src="views/examples/Hotel/public/img/bw_water_is_better.jpg" alt="WB water is better" />
+                  </div>
+                  <div class="item">
+                     <img class="img-fluid" src="views/examples/Hotel/public/img/chambre_confortable.jpg" alt="Chambre confortable" />
+                  </div>
+                  <div class="item">
+                     <img class="img-fluid" src="views/examples/Hotel/public/img/piscine_et_palmier.jpg" alt="Chambre confortable" />
+                  </div>
+                  <div class="item">
+                     <img class="img-fluid" src="views/examples/Hotel/public/img/belle_vue.jpg" alt="Belle vue" />
+                  </div>
+                  <div class="item">
+                     <img class="img-fluid" src="views/examples/Hotel/public/img/hotel_avec_chaises_verts.jpg" alt="Hotel avec chaises verts" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-4" class="py-5">
+            <div class="container">
+               <header class="mb-5 text-center">
+                  <h2>Ce que disent nos clients</h2>
+               </header>
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="item">
+                        <header class="mb-3 d-flex justify-content-between">
+                           <div>
+                              <span class="h5 fw-bold">Jean Robert</span><br />
+                              <span>Vendeur de livres</span>
+                           </div>
+                           <div>
+                              <i class="fas fa-quote-right"></i>
+                           </div>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <div>
+                           <span class="secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="item">
+                        <header class="mb-3 d-flex justify-content-between">
+                           <div>
+                              <span class="h5 fw-bold">Veloson Christian</span><br />
+                              <span>Directeur de CDI</span>
+                           </div>
+                           <div>
+                              <i class="fas fa-quote-right"></i>
+                           </div>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <div>
+                           <span class="secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                     <div class="item">
+                        <header class="mb-3 d-flex justify-content-between">
+                           <div>
+                              <span class="h5 fw-bold">Tojoson Randria</span><br />
+                              <span>Chauffeur</span>
+                           </div>
+                           <div>
+                              <i class="fas fa-quote-right"></i>
+                           </div>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi. Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                        <div>
+                           <span class="secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-5" class="position-relative">
+            <img class="img-fluid" src="views/examples/Hotel/public/img/chambre_confortable.jpg" alt="chambre confortable" />
+            <div class="position-absolute d-flex align-items-center justify-content-center">
+               <div class="container text-center">
+                  <h2 class="secondary text-uppercase mb-3">Nous vous offrons la plus belle chambre</h2>
+                  <p class="fs-5">Lorem ipsum dolor sit amet, consecteur adipiscing elit. Nam ac libero leo. NUlla facilisi.</p>
+                  <a class="btn primary" href="#">Contactez-nous</a>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-6" class="py-5">
+            <div class="container">
+               <div class="item py-5">
+                  <header class="text-center">
+                     <h2 class="secondary">Inscrivez-vous aux newsletters</h2>
+                     <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit.</p>
+                  </header>
+                  <form class="px-5" action="" method="get" accept-charset="utf-8">
+                     <div class="row align-items-end justify-content-center">
+                        <div class="col-md-8 col-lg-6 mb-1 mb-md-0">
+                           <input class="form-control" type="email" name="Email" id="email" placeholder="Entrez votre adresse e-mail" value="" required />
+                        </div>
+                        <div class="col-md-4 col-lg-2">
+                           <button class="btn primary form-control" type="submit">S'inscrire</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </main>
+      
+      <footer class="py-5">
+         <div class="container">
+            <div class="row mb-5">
+               <div class="col-md-6">
+                  <h2 class="secondary">Hotel</h2>
+                  <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit.</p>
+                  <ul class="list-unstyled">
+                     <li class="d-inline"><i class="fab fa-facebook mx-1"></i></li>
+                     <li class="d-inline"><i class="fab fa-twitter mx-1"></i></li>
+                     <li class="d-inline"><i class="fab fa-youtube mx-1"></i></li>
+                  </ul>
+               </div>
+               <div class="col-md-6">
+                  <h3 class="secondary">Contact</h3>
+                  <ul class="list-unstyled">
+                     <li><i class="fas fa-phone mx-2"></i>037 00 000 00</li>
+                     <li><i class="fas fa-envelope mx-2"></i>utilisateur@gmail.com</li>
+                     <li>Ampitakely, Fianarantsoa Madagascar</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <p><small>Tous droits réservés</small></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+      
+      <script src="slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript" charset="utf-8">
+         $('.autoslide').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            centerMode: true,
+         });
+      </script>
+   </body>
+</html>

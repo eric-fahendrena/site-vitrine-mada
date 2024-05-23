@@ -1,0 +1,280 @@
+@font-face {
+   font-family: Aleo;
+   src: url("../fonts/Aleo-Regular.otf");
+}
+
+:root {
+   --primary:  #245379;
+   --primary-88:  #24537988;
+   --dark: #124278;
+   --banner-height: 240pt;
+   --banner-height-mobile: 344pt;
+}
+
+body, html {
+   background: #125;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+main {
+   margin-top: 56px;
+}
+
+
+a {
+   color: var(--primary);
+   text-decoration: none;
+}
+
+/*Button*/
+
+.btn {
+   border-radius: 16pt;
+}
+
+.navbar {
+   background-color: #000D;
+   /*background-image: radial-gradient(circle at center, var(--primary) 0, #000 400%);*/
+}
+.navbar .nav-link {
+   text-transform: uppercase;
+}
+.navbar .nav-link:hover {
+   background-color: #000;
+}
+
+
+.navbar-toggler {
+   border: none;
+}
+.navbar-toggler:focus {
+   box-shadow: 0 0 0 transparent;
+}
+.navbar-toggler #line1,
+.navbar-toggler #line2,
+.navbar-toggler #line3 {
+   display: block;
+   background-color: var(--bs-light);
+   width: 20px;
+   height: 2px;
+   margin-top: 2px;
+   margin-bottom: 2px;
+}
+.navbar-light {
+   background-color: white;
+}
+
+
+footer {
+   background-color: var(--dark);
+}
+footer a {
+   color: #E4E4E4;
+   font-weight: bold;
+}
+footer h3 {
+   color: #00A2EF;
+}
+
+.banner {
+   height: var(--banner-height);
+}
+.banner img {
+   width: 100%;
+   height: var(--banner-height);
+   object-fit: cover;
+}
+.banner .position-absolute {
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #0004;
+}
+
+#sect-2 {
+   background-color: #0008;
+}
+
+#sect-3 {
+   height: calc(var(--banner-height) / 2);
+}
+#sect-3 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+#sect-3 .position-absolute {
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #0008;
+}
+
+#sect-4 img {
+   width: 100%;
+   height: calc(var(--banner-height) / 3);
+   object-fit: cover;
+   border-radius: 8pt;
+   box-shadow: 2pt 2pt 8pt #0004;
+   border: 2pt solid #FFF4;
+}
+
+#sect-5 {
+   background-color: #0008;
+}
+
+@media (max-width: 767px) {
+   body {
+      font-weight: 400;
+   }
+   
+   a {
+      font-weight: bold;
+   }
+   
+   .offcanvas-collapse {
+      position: fixed;
+      top: 56px; /* Height of navbar */
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      overflow-y: auto;
+      visibility: hidden;
+      background-color: #00447A;
+      transition: transform .2s ease-in-out, visibility .2s ease-in-out;
+      z-index: 0;
+   }
+   .offcanvas-collapse.open {
+      visibility: visible;
+      transform: translateX(-100%);
+   }
+   
+   .navbar .nav-link {
+      padding-left: 8pt;
+   }
+   
+   .banner {
+      height: var(--banner-height-mobile);
+   }
+   .banner img {
+      height: var(--banner-height-mobile);
+   }
+   .banner h1 {
+      font-size: 2.2rem;
+      margin-bottom: 16pt;
+   }
+   .banner .btn {
+      margin-bottom: 8pt !important;
+   }
+   
+   #sect-1 .col {
+      text-align: center;
+      padding-left: 16pt;
+      padding-right: 16pt;
+      margin-bottom: 24pt;
+   }
+   
+   #sect-3 {
+      height: calc(var(--banner-height-mobile) / 2);
+   }
+   
+   #sect-4 img {
+      height: calc(var(--banner-height-mobile) / 3);
+   }
+}
+
+/*User Experiences*/
+.banner .hidden {
+   opacity: 0;
+   transform: translateX(2.5%);
+}
+.banner .visible {
+   opacity: 1;
+   transform: translateX(0);
+   transition: all 1s ease;
+}
+
+#sect-1 .col.hidden {
+   opacity: 0;
+   transform: translateY(5%);
+}
+#sect-1 .col.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+
+#sect-2 .text.hidden {
+   opacity: 0;
+   transform: translateX(-5%);
+}
+#sect-2 .text.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+#sect-2 img.hidden {
+   opacity: 0;
+   transform: translateY(5%);
+}
+#sect-2 img.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+
+#sect-4 #item1.hidden,
+#sect-4 #item2.hidden,
+#sect-4 #item3.hidden {
+   opacity: 0;
+   transform: translateY(5%);
+}
+#sect-4 #item1.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+#sect-4 #item2.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+   transition-delay: .5s;
+}
+#sect-4 #item3.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+   transition-delay: 1s;
+}
+
+#sect-5 .text.hidden {
+   opacity: 0;
+   transform: translateX(5%);
+}
+#sect-5 .text.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+#sect-5 img.hidden {
+   opacity: 0;
+   transform: translateY(5%);
+}
+#sect-5 img.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}
+
+#smediaList.hidden {
+   opacity: 0;
+   transform: translateY(15%);
+}
+#smediaList.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 1s ease;
+}

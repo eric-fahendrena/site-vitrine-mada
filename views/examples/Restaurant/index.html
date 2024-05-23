@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+      <meta name="viewport" content="max-width=device-width, initial-scale=1.0" />
+      <title>Exemple de site d'un Restaurant</title>
+      <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel ="stylesheet" integrity ="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin = "anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" type="text/css" />
+      <link rel="stylesheet" href="views/examples/Restaurant/public/css/styles.css" type="text/css" />
+      <style type="text/css" media="all">
+         @font-face {
+            font-family: "Font Awesome 6 free";
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.ttf"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2");
+         }
+         @font-face {
+            font-family: "Font Awesome 6 brands";
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.ttf"), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2");
+         }
+         
+      </style>
+      <!--<script type="text/javascript">
+         (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+      </script>-->
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top shadow">
+            <div class="container">
+               <a class="navbar-brand" href="#">Site Vitrine Mada</a>
+               <button class="navbar-toggler" id="nbToggler">
+                  <span id="line1"></span>
+                  <span id="line2"></span>
+                  <span id="line3"></span>
+               </button>
+               <div class="offcanvas-collapse" id="nbCollapse">
+                 <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link active" href="/">Accueil</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about">A propos</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="tariffs">Les tarifs</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="blog">Blog</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      
+      <main id="restaurant" class="">
+         <section class="banner position-relative">
+            <div class="">
+               <img class="img-fluid" src="views/examples/Restaurant/public/img/burger_et_frite.jpg" alt="" />
+            </div>
+            <div class="position-absolute d-flex align-items-center">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 text-light">
+                        <h1 class="fw-bold">Savourer votre diner excéptionnel</h1>
+                        <p class="ex-text-secondary fw-semibold h1">Lorem ipsum</p>
+                        <p class="mb-5">Lorem ipsum dolor gaduirt. Sabman baruin kastlit bojol. Geandine gravityu ghuist glom.</p>
+                        <a class="ex-btn ex-bg-primary" href="#sect-6">Contactez-nous</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-1" class="py-5">
+            <div class="container">
+               <div class="row row-cols-1 row-cols-md-3">
+                  <div class="col py-2 py-md-0">
+                     <div class="item position-relative">
+                        <img class="img-fluid" src="views/examples/Restaurant/public/img/humburger.jpg" alt="" />
+                        <div class="position-absolute text-light d-flex align-items-end">
+                           <div class="text px-2">
+                              <h3 class="h4">Lorem ipsum</h3>
+                              <p>Lorem ipsum dolor subitle.</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+                  <div class="col py-2 py-md-0">
+                     <div class="item position-relative">
+                        <img class="img-fluid" src="views/examples/Restaurant/public/img/meat.jpg" alt="" />
+                        <div class="position-absolute text-light d-flex align-items-end">
+                           <div class="text px-2">
+                              <h3 class="h4">Lorem ipsum</h3>
+                              <p>Lorem ipsum dolor subitle.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col py-2 py-md-0">
+                     <div class="item position-relative">
+                        <img class="img-fluid" src="views/examples/Restaurant/public/img/pizza.jpg" alt="" />
+                        <div class="position-absolute text-light d-flex align-items-end">
+                           <div class="text px-2">
+                              <h3 class="h4">Lorem ipsum</h3>
+                              <p>Lorem ipsum dolor subitle.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-2" class="pt-3 pb-5">
+            <div class="container">
+               <div class="ex-text-dark row row-cols-2 row-cols-md-4 justify-content-center align-items-center mx-md-5">
+                  <div class="col item text-center py-3 py-md-0">
+                     <div class="mb-2">
+                        <i class="ex-text-primary fas fa-shop fs-5"></i>
+                     </div>
+                     <p class="">Vendre sur place</p>
+                  </div>
+                  
+                  <div class="col item text-center pb-3 py-md-0">
+                     <div class="mb-2">
+                        <i class="ex-text-primary fas fa-car-side fs-5"></i>
+                     </div>
+                     <p class="">Au volant</p>
+                  </div>
+                  
+                  <div class="col item text-center pb-3 py-md-0">
+                     <div class="mb-2">
+                        <i class="ex-text-primary fas fa-house fs-5"></i>
+                     </div>
+                     <p class="">A domicile</p>
+                  </div>
+                  
+                  <div class="col item text-center pb-3 py-md-0">
+                     <div class="mb-2">
+                        <i class="ex-text-primary fas fa-calendar fs-5"></i>
+                     </div>
+                     <p class="">Evenement</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-3" class="py-5">
+            <header class="container text-center mb-3">
+               <h2 class="mb-5">Echantillon de nos produits délicieux</h2>
+               <ul id="myTab" class="nav nav-underline d-flex justify-content-center" role="tablist">
+                  <li class="nav-item mx-md-2">
+                     <button class="nav-link active text-uppercase px-2 py-1" id="item-1" data-bs-toggle="tab" data-bs-target="#item1" type="button" role="tab" aria-controls="item-1-pane" aria-selected="true">Item 1</button>
+                  </li>
+                  <li class="nav-item mx-md-2">
+                     <button class="nav-link text-uppercase px-2 py-1" id="item-2" data-bs-toggle="tab" data-bs-target="#item2" type="button" role="tab" aria-controls="item-2-pane" aria-selected="false">Item 2</button>
+                  </li>
+                  <li class="nav-item mx-2">
+                     <button class="nav-link text-uppercase px-2 py-1" id="item-3" data-bs-toggle="tab" data-bs-target="#item3" type="button" role="tab" aria-controls="item-3-pane" aria-selected="false">Item 3</button>
+                  </li>
+                  <li class="nav-item mx-md-2">
+                     <button class="nav-link text-uppercase px-2 py-1" id="item-4" data-bs-toggle="tab" data-bs-target="#item4" type="button" role="tab" aria-controls="item-4-pane" aria-selected="false">Item 4</button>
+                  </li>
+               </ul>
+            </header>
+            
+            <div id="myTabContent" class="tab-content">
+               <div id="item1" class="tab-pane fade show active container" role="tabpanel" aria-labelledby="item-1" tabindex="0">
+                  <div class="row row-cols-1 row-cols-md-2">
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/delicieux_plat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">51.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/meat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">89.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/pizza.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">120.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/humburger.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">198.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            
+               <div id="item2" class="tab-pane fade container" role="tabpanel" aria-labelledby="item-2" tabindex="0">
+                  <div class="row row-cols-1 row-cols-md-2">
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/delicieux_plat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">51.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/meat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">89.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/pizza.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">120.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/humburger.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">198.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            
+               <div id="item3" class="tab-pane fade container" role="tabpanel" aria-labelledby="item-3" tabindex="0">
+                  <div class="row row-cols-1 row-cols-md-2">
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/delicieux_plat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">51.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/meat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">89.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/pizza.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">120.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/humburger.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">198.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            
+               <div id="item4" class="tab-pane fade container" role="tabpanel" aria-labelledby="item-4" tabindex="0">
+                  <div class="row row-cols-1 row-cols-md-2">
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/delicieux_plat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">51.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/meat.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">89.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/pizza.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">120.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col mb-2">
+                        <div class="item text-light">
+                           <div class="row align-items-scretch">
+                              <div class="col-md-5">
+                                 <img class="img-fluid" src="views/examples/Restaurant/public/img/humburger.jpg" alt="" />
+                              </div>
+                              <div class="col-md-7">
+                                 <h3>Lorem ipsum</h3>
+                                 <p>Lorem ipsum dolor jabur kamir. With garme, sapin.</p>
+                                 <p class="fs-3 my-0">198.000<span class="fs-5">AR</span></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </section>
+         
+         <section id="sect-4" class="ex-bg-dark ex-text-light py-5">
+            <div class="container">
+               <h2 class="mb-5">À propos de nous</h2>
+               <div class="row align-items-center">
+                  <div class="col-md-4">
+                     <img class="img-fluid" src="views/examples/Restaurant/public/img/hotel_place.jpg" alt="" />
+                  </div>
+                  <div class="col-md-8">
+                     <h3 class="ex-text-secondary">Lorem ipsum dolor</h3>
+                     <p>Lorem ipsum dolor daruim. Tarklis dalem sharkle i davik. Guird fatale yutan hyuang fuir. Gyuir, gamast lorem dolor ipsum.</p>
+                     <p>Lorem dolor psumi dakil faded. Bavardiu halaks, bro yu taman manam sliop.</p>
+                     <a class="ex-btn ex-bg-primary mt-5" href="#sect-6">Contactez-nous</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-5" class="py-5">
+            <div class="container text-center">
+               <div class="mb-3">
+                  <i class="fas fa-quote-right-alt fs-1"></i>
+               </div>
+               <h2 class="mb-5">Ce que disent nos clients</h2>
+               <div class="row row-cols-1 row-cols-md-3">
+                  <div class="col mb-5 mb-md-0">
+                     <div class="item">
+                        <p class="ex-text-secondary"><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i></p>
+                        <p>Lorem ipsum dolor habit calium. Sabathan bolir sahkram. Makahfui ahu taminir.</p>
+                        <span class="ex-text-primary fw-semibold fs-5 d-block">Jean Michel</span>
+                        <small>Vendeur</small>
+                     </div>
+                  </div>
+                  
+                  <div class="col mb-5 mb-md-0">
+                     <div class="item">
+                        <p class="ex-text-secondary"><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star-half-stroke mx-1"></i></p>
+                        <p>Lorem ipsum dolor habit calium. Sabathan bolir sahkram. Makahfui ahu taminir.</p>
+                        <span class="ex-text-primary fw-semibold fs-5 d-block">Jean Jacque</span>
+                        <small>Directeur de CDA</small>
+                     </div>
+                  </div>
+                  
+                  <div class="col mb-5 mb-md-0">
+                     <div class="item">
+                        <p class="ex-text-secondary"><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star mx-1"></i><i class="fas fa-star-half-stroke mx-1"></i></p>
+                        <p>Lorem ipsum dolor habit calium. Sabathan bolir sahkram. Makahfui ahu taminir.</p>
+                        <span class="ex-text-primary fw-semibold fs-5 d-block">Jean Verdinand</span>
+                        <small>Proprietaire de Sofati</small>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <section id="sect-6" class="ex-bg-dark ex-text-light py-5">
+            <div class="container">
+               <div class="row flex-row-reverse">
+                  
+                  <div class="col-md-7">
+                     <form class="" action="" method="get" accept-charset="utf-8">
+                        <div class="mb-4">
+                           <h3 class="ex-text-secondary">Contactez-nous</h3>
+                           <p>Nous vous repondrons dans le plus bref delai</p>
+                        </div>
+                        
+                        <div class="row">
+                           <div class="col-lg-6 mb-3">
+                              <label class="form-label" for="name">Nom</label>
+                              <input class="form-control" type="text" name="name" id="name" placeholder="Votre nom" value="" required/>
+                           </div>
+                           <div class="col-lg-6 mb-3">
+                              <label class="form-label" for="email">Adrese e-mail</label>
+                              <input class="form-control" type="email" name="email" id="email" placeholder="Votre adresse e-mail" value="" required/>
+                           </div>
+                        </div>
+                        <div class="mb-3">
+                           <label class="form-label" for="message">Message</label>
+                           <textarea class="form-control" name="mesage" id="mesage" rows="8" placeholder="Votre message" required></textarea>
+                        </div>
+                        <div class="ex-text-light form-text mb-3">
+                           Nous ne partagerons jamais votre adresse e-mail avec quelqu'un d'autre.
+                        </div>
+                        <div class="mb-3">
+                           <button class="ex-btn ex-bg-primary" type="submit">Envoyer</button>
+                        </div>
+                     </form>
+                  </div>
+                  
+                  <div class="col-md-5">
+                     <h3 class="ex-text-secondary">Nous voulons entendre votre avis</h3>
+                     <p>Poliphia darliks barduim sovlax huir garduim. Carvi lorem dolorpsumi.</p>
+                     <h3 class="ex-text-secondary">Information de contact</h3>
+                     <ul class="list-unstyled">
+                        <li><i class="fas fa-phone mx-1"></i> 037 00 000 00</li>
+                        <li><i class="fas fa-envelope mx-1"></i> utilisateur@gmail.com</li>
+                        <li><i class="fas fa-map mx-1"></i> Rue Richard Razafindrandria, Andavakongo</li>
+                     </ul>
+                  </div>
+                  
+               </div>
+            </div>
+         </section>
+      </main>
+      
+      <footer class="bg-black text-light py-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5">
+                  <h3>Restaurant</h3>
+                  <p>Lorem ipsum dolor, dolor lorem ipsum.</p>
+                  <ul class="list-unstyled">
+                     <li class="d-inline"><i class="fab fa-facebook mx-1"></i></li>
+                     <li class="d-inline"><i class="fab fa-twitter mx-1"></i></li>
+                     <li class="d-inline"><i class="fab fa-youtube mx-1"></i></li>
+                  </ul>
+               </div>
+               
+               <div class="col-md-7">
+                  <h3>Contact</h3>
+                  <ul class="list-unstyled">
+                     <li><i class="fas fa-phone mx-2"></i>037 00 000 00</li>
+                     <li><i class="fas fa-envelope mx-2"></i>utilisateur@gmail.com</li>
+                     <li>Ampitakely, Fianarantsoa Madagascar</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+      
+      <script src="views/examples/Restaurant/public/js/main.js" type="text/javascript" charset="utf-8"></script>
+      
+   </body>
+</html>

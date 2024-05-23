@@ -1,0 +1,111 @@
+
+:root {
+   --banner-height: 400pt;
+   --primary: #1363DF;
+   --secondary: #DFF6FF;
+   --light: #FFFFFF;
+   --dark: #0B212F;
+   --complementary: #45B5FF;
+   --card-padding: 8pt;
+}
+
+html, body {
+   background-color: #FFF;
+}
+
+.btn-primary {
+   background-color: var(--primary);
+}
+.btn-secondary {
+   background-color: var(--secondary);
+   border: .8pt solid var(--primary);
+   color: var(--primary);
+}
+
+
+#banner {
+   height: var(--banner-height);
+   overflow: hidden;
+}
+#banner img {
+   height: var(--banner-height);
+   width: 100%;
+   object-fit: cover;
+}
+#banner .position-absolute {
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #0008;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: var(--light);
+}
+#banner h1 {
+   font-weight: bold;
+}
+
+
+#sect-0 .container {
+   background-color: var(--dark);
+   color: var(--light);
+   padding-top: 8pt;
+   padding-bottom: 8pt;
+   padding-left: 24pt;
+   padding-right: 24pt;
+   transform: translateY(-50%);
+   box-shadow: 4pt 4pt 8pt #0006;
+}
+#sect-0 li {
+   margin-right: 8pt;
+}
+#sect-0 a {
+   font-weight: 600;
+   text-decoration: none;
+   color: var(--light);
+}
+
+#sect-2 .item {
+   background-color: var(--light);
+   box-shadow: 4pt 4pt 8pt #0004;
+}
+#sect-2 .item img {
+   height: 96pt;
+   width: 100%;
+   object-fit: cover;
+}
+#sect-2 .item .description {
+   padding: var(--card-padding);
+}
+#sect-2 .item a {
+   font-weight: bold;
+}
+
+#sect-3 {
+   height: calc(var(--banner-height) + var(--banner-height) / 3);
+   color: var(--light);
+   overflow: hidden;
+}
+#sect-3 img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+#sect-3 .position-absolute {
+   background-color: #0008;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+#sect-3 form label {
+   margin-bottom: 8pt;
+}
+
+#sect-4 .item {
+   box-shadow: 4pt 4pt 8pt #0004;
+   padding: var(--card-padding);
+}

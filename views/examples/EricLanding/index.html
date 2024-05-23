@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="max-width=device-width, initial-scale=1.0">
+      <meta name="theme-color" content="#001A51">
+      <title>Eric Landing</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     elprimary: 'rgb(255, 162, 92)',
+                     elsecondary: '#FFBD00',
+                     elheader: '#001A51',
+                     elbannerFrom: '#001A51',
+                     elbannerTo: '#002275',
+                     elabout: '#012D8C',
+                     elfooter: '#00123E',
+                     eldark: '#001A51'
+                  }
+               }
+            },
+         }
+      </script>
+      <style type="text/tailwindcss">
+         @font-face {
+            font-family: Aileron;
+            src: url(fonts/Aileron-Regular.otf);
+         }
+         @layer utilities {
+            html, body {
+               overflow-x: hidden;
+               scroll-behavior: smooth;
+            }
+            p {
+               font-family: Aileron;
+            }
+            .btn {
+               @apply text-white font-semibold bg-elprimary border-2 border-elprimary rounded-[25px] px-5 py-2 duration-300 shadow-lg uppercase;
+            }
+            .btn:hover {
+               @apply text-[#FF8D00] bg-white;
+            }
+            .btn:focus {
+               @apply outline-none;
+            }
+            
+            /* FADE */
+            h1 {
+               transform: translateX(25%);
+            }
+            h1, h2, h3, p, label, input, textarea {
+               opacity: 0;
+            }
+            footer p {
+               transform: translateY(-50%);
+            }
+            .card, .btn, img, button {
+               opacity: 0;
+               transform: scale(.9);
+            }
+            .fade-in {
+               opacity: 1;
+               transform: scale(1) translate(0, 0) rotate(0deg);
+               transition: all .8s ease-in-out;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <main class="w-full">
+         <header class="h-[56px] text-white flex justify-center items-center text-center bg-elheader">
+            <div class="logo">
+               <a class="text-[1.5rem] font-semibold select-none" href=''>Eric<span class="text-elsecondary">Land</span>ing</a>
+            </div>
+         </header>
+         <!-- hero section -->
+         <section class="h-[475px] px-5 md:px-[10%] text-white bg-gradient-to-b from-elbannerFrom to-elbannerTo flex justify-center items-center">
+            <div class="text-center">
+               <h3 class="mb-5 text-[#FFBD00] text-lg font-[300] uppercase">Creation landing page efficace</h3>
+               <h1 class="mb-5 text-[2rem] md:text-[3rem] font-bold uppercase">Pour aider les entreprises à réussir</h1>
+               <div class="mb-5">
+                  <a class="btn" href='#contact'>Contacter</a>
+               </div>
+               <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+         </section>
+         <!-- section -->
+         <section class="p-5 md:px-[10%] text-white bg-[#00379D]">
+            <section class="card my-5 p-3 bg-eldark rounded-lg md:flex">
+               <div class="p-2 md:w-[25%] flex justify-center">
+                  <img class="max-w-[100%]" src="svgs/inspiration-icon.svg" alt="Inspiration icon">
+               </div>
+               <div class="p-2 md:w-[75%]">
+                  <h3 class="mb-3 text-xl text-elprimary font-semibold">Suisciter l'intérêt du visiteur</h3>
+                  <p class="md:text-xl">Le landing page va prouver aux visiteurs que votre offre est fait pour eux et repond à leur besoin.</p>
+               </div>
+            </section>
+            <section class="card my-5 p-3 bg-eldark rounded-lg md:flex">
+               <div class="p-2 md:w-[25%] flex justify-center">
+                  <img class="max-w-[100%]" src="svgs/easy-to-use-icon.svg" alt="Chat icon">
+               </div>
+               <div class="p-2 md:w-[75%]">
+                  <h3 class="mb-3 text-xl text-elprimary font-semibold">Inviter à passer à l'action</h3>
+                  <p class="md:text-xl">Convaincre les visiteurs à prendre une action specifique, tell que s'incrire à une news letter, acheter un produit, remplir un formulaire, etc.</p>
+               </div>
+            </section>
+            <section class="card my-5 p-3 bg-eldark rounded-lg md:flex">
+               <div class="p-2 md:w-[25%] flex justify-center">
+                  <img class="max-w-[100%]" src="svgs/computer-report-icon.svg" alt="Computer report icon">
+               </div>
+               <div class="p-2 md:w-[75%]">
+                  <h3 class="mb-3 text-xl text-elprimary font-semibold">Suivre les taux des conversions</h3>
+                  <p class="md:text-xl">
+                     Vous pourrez suivre la progrèssion de vos effort en suivant le taux de conversion sur "Google Analytics".
+                     Comme ça, vous serez capable de prendre les meilleurs décisions en fonction de la situation.
+                  </p>
+               </div>
+            </section>
+            <div class="my-10 text-center">
+               <a class="btn text-lg" href='#contact'>Contacter</a>
+            </div>
+         </section>
+         
+         <section class="px-5 py-10 md:px-[10%] md:flex md:flex-wrap bg-gradient-to-b from-eldark to-elabout">
+            <div class="mb-5 p-8 md:w-[50%]">
+               <img class="rounded-[50%] shadow-xl" src="img/eric.jpg" alt="Eric, le fondateur de EricLanding">
+            </div>
+            <div class="py-5 md:w-[50%]">
+               <h2 class="mb-8 text-[1.8rem] md:text-[2.5rem] text-elprimary font-semibold">À propos de Eric Fahendrena</h2>
+               <p class="mb-5 text-lg md:text-xl text-white">Eric est le fondateur de EricLanding dont sa mission est d'ameliorer le développement des entreprise.
+               Il est passioné par le marketing digital.
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue gravida cras quis ac duis pretium ullamcorper consequat. Integer pellentesque eu.
+               </p>
+            </div>
+            <div class="w-[100%] py-5 text-center">
+               <h2 class="mb-5 md:px-[5%] text-elprimary text-[2rem] md:text-[2.5rem] font-bold">Contactez-nous pour créer la meilleur page d'attérissage</h2>
+               <a class="btn" href='#contact'>Contacter</a>
+            </div>
+         </section>
+         
+         <section class="p-5 md:px-[10%] bg-[#00379D]" id="contact">
+            <h2 class="mb-5 text-[2rem] text-elprimary text-center font-bold">Envoyez-nous un message</h2>
+            <form class="md:px-[15%] md:flex md:flex-wrap">
+               <div class="mb-3 md:px-3 md:w-[50%]">
+                  <label class="block mb-1 text-white" for="name">Nom :</label>
+                  <input class="block w-[100%] bg-gray-100 p-2 border-2 border-gray-500 rounded-[15px] focus:outline-none" type="text" id="name" name="Nom" placeholder="Entrez votre nom">
+               </div>
+               <div class="mb-3 md:px-3 md:w-[50%]">
+                  <label class="block mb-1 text-white"for="email">Adresse e-mail :</label>
+                  <input class="block w-[100%] bg-gray-100 p-2 border-2 border-gray-500 rounded-[15px] focus:outline-none" type="email" id="email" name="E-mail" placeholder="example@domaine.com">
+               </div>
+               <div class="mb-3 md:px-3 md:w-[100%]">
+                  <label class="block mb-1 text-white"for="message">Message :</label>
+                  <textarea class="block w-[100%] h-[150px] md:h-[250px] bg-gray-100 p-2 border-2 border-gray-500 rounded-[15px] focus:outline-none" id="message" placeholder="Entrez votre message"></textarea>
+               </div>
+               <div class="mb-3 md:px-3 md:w-[100%]">
+                  <button class="w-[50%] p-2 text-white bg-blue-500 hover:bg-blue-800 rounded-[25px] shadow-lg focus:outline-none" type="submit">Envoyer</button>
+               </div>
+            </form>
+         </section>
+      </main>
+      
+      <footer class="p-5 text-white text-center bg-elfooter">
+         <p><small>© 2023 | Tout droit réservé</small></p>
+      </footer>
+      
+   </body>
+</html>

@@ -1,0 +1,174 @@
+
+:root {
+   --banner-height: 400pt;
+   --primary: #9200FF;
+   --secondary: #FFDE00;
+   --light: #E0E0E0;
+   --dark: #070707;
+   --item-padding: 8pt;
+   --outer-bradius: 16pt;
+   --inner-bradius: 8pt;
+}
+
+html, body {
+   background-color: #FFF;
+   color: var(--dark);
+}
+
+header.master-header {
+   background-color: #0008;
+   padding: 8pt;
+}
+header.master-header a {
+   text-decoration: none;
+   font-size: 1.25rem;
+}
+
+.primary {
+   color: var(--primary);
+}
+.secondary {
+   color: var(--secondary);
+}
+
+.btn {
+   border-radius: var(--inner-bradius);
+}
+.btn.primary {
+   background-color: var(--primary);
+   color: var(--light);
+}
+.btn.secondary {
+   background-color: var(--secondary);
+   color: var(--light);
+}
+
+.btn:hover {
+   color: var(--dark);
+}
+
+.banner .text {
+   height: calc(var(--banner-height) / 2);
+   background-color: var(--dark);
+   color: var(--light);
+}
+.banner img {
+   height: calc(var(--banner-height) / 2);
+   width: 100%;
+   object-fit: cover;
+}
+.banner .offer {
+   background-color: var(--dark);
+   color: var(--light);
+}
+.banner .offer i {
+   color: var(--secondary);
+}
+
+#sect-1 .item {
+   background-color: white;
+   box-shadow: 4pt 4pt 8pt #0004;
+   padding: var(--item-padding);
+   border-radius: var(--outer-bradius);
+}
+#sect-1 .item .icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 56pt;
+   width: 56pt;
+   background-color: var(--primary);
+   color: var(--light);
+   border-radius: var(--inner-bradius);
+}
+
+
+#sect-2 {
+   background-color: var(--dark);
+   color: var(--light);
+   height: var(--banner-height);
+   overflow: hidden;
+}
+#sect-2 img {
+   height: var(--banner-height);
+   width: 100%;
+   object-fit: cover;
+}
+
+
+#sect-3 .item {
+   font-size: .8rem;
+   padding: calc(var(--item-padding) / 2);
+}
+#sect-3 .item img {
+   height: 320pt;
+   width: 100%;
+   object-fit: cover;
+}
+
+#sect-4 .item {
+   background-color: var(--light);
+   box-shadow: 4pt 4pt 8pt #0004;
+   padding: var(--item-padding);
+   margin-bottom: var(--item-padding);
+   border-radius: var(--outer-bradius);
+}
+#sect-4 .item .fa-quote-right {
+   color: var(--primary);
+}
+#sect-4 .item .fa-star {
+   text-shadow: 2pt 2pt 4pt #0004;
+}
+
+#sect-5 {
+   height: 240pt;
+   overflow: hidden;
+   color: var(--light);
+}
+#sect-5 img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+#sect-5 .position-absolute {
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #0008;
+}
+
+#sect-6 .item {
+   background-color: var(--dark);
+   color: var(--light);
+   border-radius: var(--outer-bradius);
+   padding: var(--item-padding);
+   
+   margin-left: calc(var(--item-padding) * 8);
+   margin-right: calc(var(--item-padding) * 8);
+}
+#sect-6 .item input {
+   border-radius: var(--inner-bradius);
+}
+
+footer {
+   background-color: var(--dark);
+   color: var(--light);
+}
+
+@media (max-width: 767px) {
+   #sect-6 .item {
+      margin-left: var(--item-padding);
+      margin-right: var(--item-padding);
+   }
+}
+
+.slick-prev {
+   transform: translateX(200%);
+   z-index: 1;
+}
+.slick-next {
+   transform: translateX(-200%);
+   z-index: 1;
+}
+
